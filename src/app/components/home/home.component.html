@@ -1,0 +1,16 @@
+<h2 highlight >Products</h2> 
+<div class="col-md-3 col-sm-6" *ngFor="let item of products|async"> 
+<div class="card" style="margin-bottom:20 px;height:300px;padding:5px">
+    <img src="{{item.imageUrl}}" height="250" width="200" class="card-img-top" alt="{{item.name}}">
+    <div>
+        <a [routerLink] ="['/detail',item.id]">
+           Go to details
+        </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.brand}}</p>
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+    </div>
+  </div>
+</div>
